@@ -1,0 +1,129 @@
+
+  :root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --animation-duration: 250ms;
+  }
+  h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  ul,
+  ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .is-hidden {
+    display: none;
+  }
+  .loadNore-display {
+        display: block;
+  }
+.search-form {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  padding: 5 0;
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  z-index: 100;
+}
+  .gallery {
+    margin-top: 50px;
+    display: grid;
+    max-width: 1140px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-auto-rows: 240px;
+    grid-gap: 12px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+.gallery__item {
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+      padding-bottom: 100px;
+    }
+  
+  .gallery__image:hover {
+    transform: scale(1.03);
+  }
+  
+  .gallery__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+  }
+  
+  .gallery__link {
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+  }
+  .gallery__link:hover {
+    cursor: zoom-in;
+  }
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+  align-items: center;
+  } 
+  .gallery__thumb {
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .photo-card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 640px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+        object-fit: cover;
+  
+  }
+  .info-item {
+  color: black;
+  font-style: italic;
+  }
+
+  .search-btn {
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 0;
+  }
+  .search-btn:hover, .search-btn:focus {
+    background-color: rgb(224, 235, 250);
+  }
+
+  .load-more {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    min-width: 200px;
+    height: 50px;
+    background-color: blue;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 0;
+  }
+  .load-more:hover, .load-more:focus {
+    background-color: rgb(23, 12, 151);
+  }
