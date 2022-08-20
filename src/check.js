@@ -9,7 +9,10 @@ function checkRes(response) {
   
     if (dataHits.length !== 0) {
       Notify.info(`Hooray! We found ${totalHits} images.`);
+      
       creatList(dataHits);
+      loadMore.classList.remove('is-hidden');
+      loadMore.classList.add('loadNore-display');
     } else {
       gallery.innerHTML = '';
       Notify.info(
@@ -24,7 +27,9 @@ function checkRes(response) {
   
     if (dataTotalHits > photoPerPage) {
       loadMore.classList.remove('is-hidden');
+      loadMore.classList.add('loadNore-display');
     } else {
+      loadMore.classList.remove('loadNore-display');
       loadMore.classList.add('is-hidden');
       Notify.info(
         "We're sorry, but you've reached the end of search results."

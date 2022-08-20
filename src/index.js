@@ -19,16 +19,15 @@ function  onButtonClick (e)  {
     
     if (!value) {
         gallery.innerHTML = '';
-        loadMore.classList.add('is-hidden');
         loadMore.classList.remove('loadNore-display');
+        loadMore.classList.add('is-hidden');
         Notify.info(
           'Sorry, there are no images matching your search query. Please try again.'
         );
         return;
       } else {
         gallery.innerHTML = '';
-        loadMore.classList.remove('is-hidden');
-        loadMore.classList.add('loadNore-display');
+
         fetchImage(value, stepPage)
           .then(checkRes)
           .catch(error => console.log(error));
